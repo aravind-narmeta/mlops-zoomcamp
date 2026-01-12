@@ -1,141 +1,243 @@
-<p align="center">
-  <img width="80%" src="images/banner-2025.jpg" alt="MLOps Zoomcamp">
-</p>
+Lung Cancer Prediction – End-to-End MLOps Project
+Overview
 
-<h1 align="center">
-    <strong>MLOps Zoomcamp: A Free 9-Week Course on Productionizing ML Services</strong>
-</h1>
+This project demonstrates an end-to-end Machine Learning Operations (MLOps) workflow for predicting lung cancer risk based on patient health and lifestyle attributes. The objective is not only to train a machine learning model, but also to build a complete, production-ready system that includes experiment tracking, workflow orchestration, deployment, monitoring, and CI/CD following industry best practices.
 
-<p align="center">
-MLOps (machine learning operations) is a must-know skill for many data professionals. Master the fundamentals of MLOps, from training and experimentation to deployment and monitoring.
-</p>
+The project is implemented as part of an MLOps capstone assignment and is designed to be reproducible, extensible, and cloud-ready.
 
-<p align="center">
-<a href="https://airtable.com/shrCb8y6eTbPKwSTL"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
-</p>
+Problem Description
 
-<p align="center">
-<a href="https://datatalks.club/slack.html">Join Slack</a> •
-<a href="https://app.slack.com/client/T01ATQK62F8/C01FABYF2RG">#course-mlops-zoomcamp Channel</a> •
-<a href="https://t.me/dtc_courses">Telegram Announcements</a> •
-<a href="https://www.youtube.com/playlist?list=PL3MmuxUbc_hIUISrluw_A7wDSmfOhErJK">Course Playlist</a> •
-<a href="https://datatalks.club/faq/mlops-zoomcamp.html">FAQ</a> •
-<a href="https://ctt.ac/fH67W">Tweet about the Course</a>
-</p>
+Lung cancer is one of the leading causes of cancer-related deaths worldwide. Early detection can significantly improve treatment outcomes. The goal of this project is to build a binary classification model that predicts whether a patient is at high risk of lung cancer based on structured clinical and behavioral data.
 
-## How to Take MLOps Zoomcamp
+The solution addresses the following challenges:
 
-### 2025 Cohort
-- **Start Date**: May 5, 2025
-- **Register Here**: [Sign up](https://airtable.com/shrCb8y6eTbPKwSTL)
-- **Stay Updated**: Subscribe to our [Google Calendar](https://calendar.google.com/calendar/?cid=M3Jzbmg0ZDA2aHVsY2M1ZjcyNDJtODNyMTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) (Desktop only)
+Reliable data preprocessing and feature handling
 
-### Self-Paced Learning
-All course materials are freely available for independent study. Follow these steps:
-1. Watch the course videos.
-2. Join the [Slack community](https://datatalks.club/slack.html).
-3. Refer to the [FAQ document](https://datatalks.club/faq/mlops-zoomcamp.html) for guidance.
+Reproducible model training with experiment tracking
 
-## Syllabus
-The course consists of structured modules, hands-on workshops, and a final project to reinforce your learning. Each module introduces core MLOps concepts and tools.
+Automated training workflows
 
-### Prerequisites
-To get the most out of this course, you should have prior experience with:
-- Python
-- Docker
-- Command line basics
-- Machine learning (e.g., through [ML Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp))
-- 1+ year of programming experience
+Scalable model deployment
 
-## Modules
+Continuous monitoring of model and data performance
 
-### [Module 1: Introduction](01-intro)
-- What is MLOps?
-- MLOps maturity model
-- NY Taxi dataset (our running example)
-- Why MLOps is essential
-- Course structure & environment setup
-- Homework
+Dataset
 
-### [Module 2: Experiment Tracking & Model Management](02-experiment-tracking)
-- Introduction to experiment tracking
-- MLflow basics
-- Model saving and loading
-- Model registry
-- Hands-on MLflow exercises
-- Homework
+Source: Kaggle – Lung Cancer Prediction Dataset
 
-### [Module 3: Orchestration & ML Pipelines](03-orchestration)
+Type: Tabular data (CSV)
 
-- Workflow orchestration
-- Homework
+Target variable: Lung cancer presence (binary)
 
-### [Module 4: Model Deployment](04-deployment)
-- Deployment strategies: online (web, streaming) vs. offline (batch)
-- Deploying with Flask (web service)
-- Streaming deployment with AWS Kinesis & Lambda
-- Batch scoring for offline processing
-- Homework
+Features include demographic information, smoking habits, and health indicators
 
-### [Module 5: Model Monitoring](05-monitoring)
-- Monitoring ML-based services
-- Web service monitoring with Prometheus, Evidently, and Grafana
-- Batch job monitoring with Prefect, MongoDB, and Evidently
-- Homework
+The dataset is stored locally under:
 
-### [Module 6: Best Practices](06-best-practices)
-- Unit and integration testing
-- Linting, formatting, and pre-commit hooks
-- CI/CD with GitHub Actions
-- Infrastructure as Code (Terraform)
-- Homework
+data/raw/
 
-### [Final Project](07-project/)
-- End-to-end project integrating all course concepts
+Project Architecture
 
-## Community & Support
+The system follows a modular architecture:
 
-### Getting Help on Slack
+Data ingestion and preprocessing
 
-Join the [`#course-mlops-zoomcamp`](https://app.slack.com/client/T01ATQK62F8/C02R98X7DS9) channel on [DataTalks.Club Slack](https://datatalks.club/slack.html) for discussions, troubleshooting, and networking.
+Model training and evaluation
 
-To keep discussions organized:
-- Follow [our guidelines](asking-questions.md) when posting questions.
-- Review the [community guidelines](https://datatalks.club/slack/guidelines.html).
+Experiment tracking and model registry
 
-## Instructors
+Workflow orchestration
 
-- [Cristian Martinez](https://www.linkedin.com/in/cristian-javier-martinez-09bb7031/)
-- [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/)
-- [Emeli Dral](https://www.linkedin.com/in/emelidral/)
+Model deployment as a web service
 
+Model and data monitoring
 
-## Sponsors & Supporters
+CI/CD automation
 
-Interested in supporting our community? Reach out to [alexey@datatalks.club](mailto:alexey@datatalks.club).
+Technology Stack
+Machine Learning
 
-## About DataTalks.Club
+Python
 
-<p align="center">
-  <img width="40%" src="https://github.com/user-attachments/assets/1243a44a-84c8-458d-9439-aaf6f3a32d89" alt="DataTalks.Club">
-</p>
+Scikit-learn
 
-<p align="center">
-<a href="https://datatalks.club/">DataTalks.Club</a> is a global online community of data enthusiasts. It's a place to discuss data, learn, share knowledge, ask and answer questions, and support each other.
-</p>
+Pandas, NumPy
 
-<p align="center">
-<a href="https://datatalks.club/">Website</a> •
-<a href="https://datatalks.club/slack.html">Join Slack Community</a> •
-<a href="https://us19.campaign-archive.com/home/?u=0d7822ab98152f5afc118c176&id=97178021aa">Newsletter</a> •
-<a href="http://lu.ma/dtc-events">Upcoming Events</a> •
-<a href="https://calendar.google.com/calendar/?cid=ZjhxaWRqbnEwamhzY3A4ODA5azFlZ2hzNjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a> •
-<a href="https://www.youtube.com/@DataTalksClub/featured">YouTube</a> •
-<a href="https://github.com/DataTalksClub">GitHub</a> •
-<a href="https://www.linkedin.com/company/datatalks-club/">LinkedIn</a> •
-<a href="https://twitter.com/DataTalksClub">Twitter</a>
-</p>
+MLOps
 
-All the activity at DataTalks.Club mainly happens on [Slack](https://datatalks.club/slack.html). We post updates there and discuss different aspects of data, career questions, and more.
+MLflow (experiment tracking and model registry)
 
-At DataTalksClub, we organize online events, community activities, and free courses. You can learn more about what we do at [DataTalksClub Community Navigation](https://www.notion.so/DataTalksClub-Community-Navigation-bf070ad27ba44bf6bbc9222082f0e5a8?pvs=21).
+Prefect (workflow orchestration)
+
+Evidently (model and data monitoring)
+
+Deployment
+
+FastAPI (REST API)
+
+Docker (containerization)
+
+Cloud & Infrastructure
+
+AWS (EC2, S3)
+
+Terraform (Infrastructure as Code)
+
+Engineering Best Practices
+
+Pytest (unit and integration testing)
+
+GitHub Actions (CI/CD)
+
+Black / Ruff (formatting and linting)
+
+Makefile
+
+Pre-commit hooks
+
+Repository Structure
+lung-cancer-mlops/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── src/
+│   ├── data_loader.py
+│   ├── features.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+│
+├── pipelines/
+│   └── training_pipeline.py
+│
+├── monitoring/
+│   └── drift_report.py
+│
+├── api/
+│   ├── app.py
+│   └── schema.py
+│
+├── tests/
+│   ├── test_features.py
+│   └── test_api.py
+│
+├── terraform/
+│   └── main.tf
+│
+├── .github/workflows/
+│   └── ci.yml
+│
+├── Dockerfile
+├── Makefile
+├── requirements.txt
+└── README.md
+
+Model Training
+
+Data is preprocessed and split into training and testing sets
+
+A classification model (Logistic Regression / Random Forest) is trained
+
+Evaluation metrics include accuracy, precision, recall, and F1-score
+
+Trained models are logged and registered using MLflow
+
+Experiment Tracking and Model Registry
+
+MLflow is used to:
+
+Track hyperparameters and metrics
+
+Store trained model artifacts
+
+Register and version models for deployment
+
+Workflow Orchestration
+
+Prefect orchestrates the training pipeline, including:
+
+Data loading
+
+Feature preprocessing
+
+Model training
+
+Evaluation
+
+Model registration
+
+This allows the pipeline to be run locally or in the cloud in a repeatable manner.
+
+Model Deployment
+
+The trained model is exposed through a REST API using FastAPI.
+
+Key characteristics:
+
+JSON-based input/output
+
+Containerized using Docker
+
+Can be deployed locally or on cloud infrastructure
+
+Model Monitoring
+
+Evidently is used to monitor:
+
+Data drift
+
+Feature distribution changes
+
+Prediction drift
+
+Monitoring reports are generated periodically and can be used to trigger retraining workflows if performance degrades.
+
+CI/CD Pipeline
+
+GitHub Actions is used to automate:
+
+Code linting
+
+Unit and integration tests
+
+Build validation on every commit
+
+This ensures code quality and prevents regressions.
+
+How to Run the Project Locally
+1. Clone the repository
+git clone <repository-url>
+cd lung-cancer-mlops
+
+2. Install dependencies
+make install
+
+3. Run tests
+make test
+
+4. Train the model
+python src/train.py
+
+5. Start the API
+uvicorn api.app:app --reload
+
+Reproducibility
+
+All dependencies are versioned in requirements.txt
+
+Clear instructions are provided to run the project
+
+Code is modular and testable
+
+Infrastructure can be recreated using Terraform
+
+Future Improvements
+
+Add automated retraining based on monitoring alerts
+
+Extend deployment to Kubernetes
+
+Implement feature store integration
+
+Add model explainability (SHAP)
